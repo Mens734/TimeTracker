@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>time-tracking</title>
+  </head>
+  <body class="bg-[#0F1424] font-light">
+    <div
+      class="flex p-5 mt-10 gap-5 flex-col md:grid md:grid-cols-4 md:grid-rows-2 md:max-w-250 md:my-30 lg:my-100 xl:mx-50 xl:my-100"
+    >
+      <div class="md:row-span-2 bg-[#1C1F4A] rounded-xl">
+        <div
+          class="flex md:flex-col md:gap-8 p-7 md:p-6 md:h-65 md:items-start items-center rounded-xl gap-3 bg-[#382ab7]"
+        >
+          <img
+            class="w-12 border-2 border-white h-12 rounded-full"
+            src="/src/Img/image-jeremy.png"
+          />
+          <p class="text-xs text-white">
+            <span class="opacity-40">Report for</span><br /><span
+              class="text-lg md:text-4xl"
+              >Jeremy Robson</span
+            >
+          </p>
+        </div>
+        <div class="my-3">
+          <nav>
+            <ul
+              class="flex md:flex-col md:gap-2 md:p-4 text-white justify-around"
+            >
+              <li>
+                <button data-period="daily" class="period-btn">Daily</button>
+              </li>
+              <li>
+                <button data-period="weekly" class="period-btn">Weekly</button>
+              </li>
+              <li>
+                <button data-period="monthly" class="period-btn">Monthly</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-orange-300 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-3 opacity-60 overflow-hidden"
+            src="/src/Img/icon-work.svg"
+          />
+          <div
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Work</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Work"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">32hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-blue-300 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-1 opacity-60 overflow-hidden"
+            src="/src/Img/icon-play.svg"
+          />
+          <div
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Play</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Play"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">10hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 8hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-pink-400 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-3 opacity-60 overflow-hidden"
+            src="/src/Img/icon-study.svg"
+          />
+          <div
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Study</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Study"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">4hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-green-400 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-1 opacity-60 overflow-hidden"
+            src="/src/Img/icon-exercise.svg"
+          />
+          <div
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Exercise</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Exercise"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">4hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-purple-700 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-4 opacity-60 overflow-hidden"
+            src="/src/Img/icon-social.svg"
+          />
+          <div
+            data-title="Social"
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Social</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Social"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">5hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bg-yellow-300 rounded-xl md:h-50 overflow-hidden h-35 relative"
+        >
+          <img
+            class="absolute right-3 -top-3 opacity-60 overflow-hidden"
+            src="/src/Img/icon-self-care.svg"
+          />
+          <div
+            class="bg-[#1C1F4A] rounded-xl p-5 h-26 md:h-40 absolute bottom-0 right-0 left-0 text-white"
+          >
+            <div class="flex justify-between items-center">
+              <p class="text-[18px] font-medium">Self Care</p>
+              <img src="/src/Img/icon-ellipsis.svg" />
+            </div>
+            <div
+              data-title="Self Care"
+              class="card flex justify-between md:flex-col md:items-start items-center mt-1"
+            >
+              <p class="text-2xl md:text-4xl md:m-1 current-hours">2hrs</p>
+              <p class="text-xs opacity-60 previous-hours">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
