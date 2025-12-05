@@ -13,14 +13,27 @@ fetch("/data.json")
 periodButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         const period = btn.dataset.period;
-        periodButtons.forEach(button => button.classList.remove("text-white"));
-        periodButtons.forEach(button => button.classList.add("text-slate-700"));
+        // periodButtons.forEach(button => button.classList.remove("text-white"));
+        // periodButtons.forEach(button => button.classList.add("text-slate-700"));
 
-        btn.classList.add("text-white");
-        btn.classList.remove("text-slate-700")
+        // btn.classList.add("text-white");
+        // btn.classList.remove("text-slate-700")
         updateCards(period);
     });
 });
+
+function setActiveButton(period){
+    periodButtons.forEach(b => {
+        if (b.dataset.period === period) {
+            b.classList.add("text-white");
+            b.classList.remove("text-slate-700");
+        } else {
+            b.classList.remove("text-white");
+            b.classList.add("text-slate-700");
+        }
+    });
+}
+
 
 function updateCards(period){
     data.forEach(item => {
@@ -32,4 +45,6 @@ function updateCards(period){
         current.textContent = `${item.timeframes[period].current}hrs`;
         previous.textContent = `Last Week - ${item.timeframes[period].previous}hrs`;
     });
+    setActiveButton(period);
+  
 };
