@@ -1,8 +1,9 @@
+
 const periodButtons = document.querySelectorAll("[data-period]");
 let data = [];
 
 // Load the JSON file
-fetch("data.json")
+fetch("/data.json")
 .then(res => res.json())
 .then(json => {
     data = json;
@@ -24,7 +25,6 @@ periodButtons.forEach(btn => {
 function updateCards(period){
     data.forEach(item => {
         const card = document.querySelector(`.card[data-title="${item.title}"]`);
-        if (!card) return;
 
         const current = card.querySelector(".current-hours");
         const previous = card.querySelector(".previous-hours");
